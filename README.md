@@ -48,7 +48,7 @@ Things you may want to cover:
 
 | Column      | Type    | Options                        |
 | ----------- | ------- | ------------------------------ |
-| name        | string  | null: false                    |
+| title       | string  | null: false                    |
 | image       | string  | null: false                    |
 | explanation | string  | null: false                    |
 | genru       | integer | null: false                    |
