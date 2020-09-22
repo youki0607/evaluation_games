@@ -46,13 +46,13 @@ Things you may want to cover:
 
 ## tweets テーブル
 
-| Column  | Type    | Options                        |
-| ------- | ------- | ------------------------------ |
-| name    | string  | null: false                    |
-| image   | string  | null: false                    |
-| text    | string  | null: false                    |
-| genru   | integer | null: false                    |
-| user_id | integer | null: false, foreign_key: true |
+| Column      | Type    | Options                        |
+| ----------- | ------- | ------------------------------ |
+| name        | string  | null: false                    |
+| image       | string  | null: false                    |
+| explanation | string  | null: false                    |
+| genru       | integer | null: false                    |
+| user_id     | integer | null: false, foreign_key: true |
 
 ### Association
 
