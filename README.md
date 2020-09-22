@@ -22,3 +22,53 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## "EVAGAMES"
+
+## "プレイしたゲームのレビューやそれに対するコメントなどができるアプリケーション"
+
+
+# テーブル設計
+
+## usersテーブル
+
+| Column   | Type    | Options     |
+| -------- | ------- | ----------- |
+| nickname | string | null: false |
+| email    | string | primary_key |
+| password | string | null: false |
+
+### Association
+
+- has_many :tweets
+- has_many :comments
+
+
+## tweets テーブル
+
+| Column  | Type    | Options                        |
+| ------- | ------- | ------------------------------ |
+| name    | string  | null: false                    |
+| image   | string  | null: false                    |
+| text    | string  | null: false                    |
+| genru   | integer | null: false                    |
+| user_id | integer | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- has_many :comments
+
+
+## comments テーブル
+
+| Column   | Type    | Options                        |
+| -------- | ------- | ------------------------------ |
+| text     | string  | null: false                    |
+| user_id  | integer | null: false, foreign_key: ture |
+| tweet_id | integer | null: false, foreign_key: ture |
+
+### Association
+
+- belongs_to :user
+- belongs_to :tweet
