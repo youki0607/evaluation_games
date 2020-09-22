@@ -64,7 +64,7 @@ Things you may want to cover:
 
 | Column   | Type    | Options                        |
 | -------- | ------- | ------------------------------ |
-| text     | string  | null: false                    |
+| text     | text    | null: false                    |
 | user_id  | integer | null: false, foreign_key: ture |
 | tweet_id | integer | null: false, foreign_key: ture |
 
