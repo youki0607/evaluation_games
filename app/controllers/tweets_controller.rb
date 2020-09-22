@@ -28,11 +28,13 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
   private
   def tweet_params
-    params.require(:tweet).permit(:name, :image, :explanation).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:title, :image, :explanation).merge(user_id: current_user.id)
   end
 
   def set_tweet
