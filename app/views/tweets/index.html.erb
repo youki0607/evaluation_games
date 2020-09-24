@@ -3,5 +3,9 @@
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>
 <div class="contents row">
-  <%= tweets_path(@tweet) %>
+<% @tweets.each do |tweet| %>
+  <%= image_tag tweet.image.variant(resize: '700x700'), class: "tweet-img" %>
+  <div class="chat"></div>
+  <%= render partial: "tweet", locals: { tweet: tweet } %>
+  <% end %>
 </div>
